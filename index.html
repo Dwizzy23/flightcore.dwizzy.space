@@ -3,77 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-Flightcore.pl | Flightcore.Dwizzy.Space</title>
+  <title>Flightcore Studios | Flightcore.Dwizzy.Space</title>
   <style>
     body {
       background-color: #000;
       color: #33BC2E;
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
+      min-height: 100vh;
+      box-sizing: border-box;
     }
-    h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0 0 10px 0;
+    }
+    header p {
+      font-size: 1.2em;
+      margin: 5px 0;
     }
     .social {
       display: flex;
       gap: 20px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     .social a {
-      color: #fff;
+      color: #33BC2E;
       text-decoration: none;
-      font-size: 1.2em;
-      border: 2px solid #fff;
+      font-size: 1em;
+      border: 2px solid #33BC2E;
       padding: 10px 20px;
       border-radius: 8px;
       transition: background-color 0.3s, color 0.3s;
     }
     .social a:hover {
-      background-color: #fff;
-      color: #33BC2E;
+      background-color: #33BC2E;
+      color: #000;
+    }
+    .map {
+      margin: 30px 0;
+      max-width: 100%;
+      width: 300px;
+      border: 2px solid #33BC2E;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .main-image {
+      max-width: 300px;
+      width: 100%;
+      margin: 20px 0;
+      border-radius: 8px;
+      border: 2px solid #33BC2E;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin: 30px 0;
+    }
+    .gallery img {
+      max-width: 300px;
+      width: 100%;
+      border-radius: 8px;
+      border: 2px solid #33BC2E;
+    }
+    .portfolio-link img {
+      max-width: 150px;
+      border: 2px solid #33BC2E;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    .portfolio-link img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #555;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <h1>🧩 Flightcore Studios Sp. z o.o.
-📌 Mickiewicza 9/U1
-🗺️ 01-517 Warszawa</h1>
+
+  <header>
+    <h1>🧩 Flightcore Studios Sp. z o.o.</h1>
+    <p>📍 Mickiewicza 9/U1, 01-517 Warszawa</p>
+  </header>
+
   <div class="social">
-    <a href="mailto:kontakt@flightcore.pl">E-mail</a>
-    <a href="https://instagram.com/@dwizzy23_" target="_blank">HIT DM on Instagram</a>
+    <a href="mailto:kontakt@flightcore.pl">✉️ E-mail</a>
+    <a href="https://instagram.com/@dwizzy23_" target="_blank">📲 Instagram DM</a>
   </div>
 
-<iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2445.916086649873!2d20.9898976!3d52.2618083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecd5cba473bdf%3A0x42b119266c786761!2sFLIGHTCORE%20Studios!5e0!3m2!1spl!2spl!4v1719580910401!5m2!1spl!2spl" 
-  width="300" 
-  height="400" 
-  style="border:0;" 
-  allowfullscreen="" 
-  loading="lazy" 
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
+  <div class="map">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2445.916086649873!2d20.9898976!3d52.2618083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecd5cba473bdf%3A0x42b119266c786761!2sFLIGHTCORE%20Studios!5e0!3m2!1spl!2spl!4v1719580910401!5m2!1spl!2spl" 
+      width="100%" 
+      height="400" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
 
-<img src="flightcore dwizzy kejn.jpg" alt="FLIGHTCORE DWIZZY KEJN" style="max-width: 30%; height: auto;">
+  <img src="flightcore dwizzy kejn.jpg" alt="FLIGHTCORE DWIZZY KEJN" class="main-image">
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="flightcore1.jpg" alt="Flightcore 1" style="max-width: 300px; width: 100%; height: auto;">
-  <img src="flightcore2.jpg" alt="Flightcore 2" style="max-width: 300px; width: 100%; height: auto;">
-  <img src="flightcore3.jpg" alt="Flightcore 3" style="max-width: 300px; width: 100%; height: auto;">
-  <img src="flightcore4.jpg" alt="Flightcore 4" style="max-width: 300px; width: 100%; height: auto;">
-  <img src="flightcore5.jpg" alt="Flightcore 5" style="max-width: 300px; width: 100%; height: auto;">
-  <img src="flightcore6.jpg" alt="Flightcore 6" style="max-width: 300px; width: 100%; height: auto;">
-</div>
+  <div class="gallery">
+    <img src="flightcore1.jpg" alt="Flightcore 1">
+    <img src="flightcore2.jpg" alt="Flightcore 2">
+    <img src="flightcore3.jpg" alt="Flightcore 3">
+    <img src="flightcore4.jpg" alt="Flightcore 4">
+    <img src="flightcore5.jpg" alt="Flightcore 5">
+    <img src="flightcore6.jpg" alt="Flightcore 6">
+  </div>
 
-<a href="https://www.instagram.com/stories/highlights/17995675900538713/" target="_blank">
-  <img src="flightcore_portfolio.jpg" alt="❗ PORTFOLIO 📁 CREDITS ❗ " style="max-width: 150px; height: auto;">
-</a>
+  <a href="https://www.instagram.com/stories/highlights/17995675900538713/" target="_blank" class="portfolio-link">
+    <img src="flightcore_portfolio.jpg" alt="❗ PORTFOLIO 📁 CREDITS ❗">
+  </a>
 
+  <footer>
+    © 2025 Flightcore Studios Sp. z o.o. | flightcore.pl
+  </footer>
 
 </body>
 </html>
