@@ -4,6 +4,99 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flightcore Studios | Flightcore.Dwizzy.Space</title>
+
+<h1>PORTFOLIO | SPRAWDŹ KTO U NAS BYŁ | PORTFOLIO</h1>
+
+<div class="gallery">
+  <img src="flightcore1.jpg" alt="Flightcore 1" onclick="openLightbox(0)">
+  <img src="flightcore2.jpg" alt="Flightcore 2" onclick="openLightbox(1)">
+  <img src="flightcore3.jpg" alt="Flightcore 3" onclick="openLightbox(2)">
+  <img src="flightcore4.jpg" alt="Flightcore 4" onclick="openLightbox(3)">
+  <img src="flightcore5.jpg" alt="Flightcore 5" onclick="openLightbox(4)">
+  <img src="flightcore6.jpg" alt="Flightcore 6" onclick="openLightbox(5)">
+</div>
+
+<div id="lightbox">
+  <img id="lightbox-img" src="" alt="Lightbox">
+  <div class="controls">
+    <span onclick="prevImage()">&#8592; Poprzednie</span>
+    <span onclick="closeLightbox()">Zamknij X</span>
+    <span onclick="nextImage()">Następne &#8594;</span>
+  </div>
+</div>
+
+<script>
+const images = [
+  "flightcore1.jpg",
+  "flightcore2.jpg",
+  "flightcore3.jpg",
+  "flightcore4.jpg",
+  "flightcore5.jpg",
+  "flightcore6.jpg"
+];
+
+let currentIndex = 0;
+
+function openLightbox(index) {
+  currentIndex = index;
+  document.getElementById('lightbox-img').src = images[index];
+  document.getElementById('lightbox').style.display = 'flex';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+}
+
+function nextImage() {
+  currentIndex = (currentIndex + 1) % images.length;
+  document.getElementById('lightbox-img').src = images[currentIndex];
+}
+
+function prevImage() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  document.getElementById('lightbox-img').src = images[currentIndex];
+}
+</script>
+
+<body>
+
+  <header>
+    <h1>🧩 Flightcore Studios 🧩</h1>
+    <p>📍 Mickiewicza 9/U1, 01-517 Warszawa</p>
+  </header>
+<p>kontakt@flightcore.pl</p>
+  <div class="social">
+<a href="https://dwizzy.space">📁 Portfolio Dwizzy`ego</a>
+    <a href="mailto:kontakt@flightcore.pl">✉️ E-mail</a>
+    <a href="https://instagram.com/dwizzy23_" target="_blank">📲 Instagram DM</a>
+  </div>
+
+  <div class="map">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2445.916086649873!2d20.9898976!3d52.2618083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecd5cba473bdf%3A0x42b119266c786761!2sFLIGHTCORE%20Studios!5e0!3m2!1spl!2spl!4v1719580910401!5m2!1spl!2spl" 
+      width="100%" 
+      height="500" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+<video controls width="600" style="border: 2px solid #33BC2E; border-radius: 8px; margin: 20px 0;">
+  <source src="flightcore pentor 3.mp4" type="video/mp4">
+  Nie mozemy wyswietlic pliku. Zmien przegladarke badz urzadzenie!
+</video>
+
+  <img src="flightcore dwizzy kejn.jpg" alt="FLIGHTCORE DWIZZY KEJN" class="main-image">
+
+<h1 style="text-align: center;">PORTFOLIO | SPRAWDŹ KTO U NAS BYŁ | PORTFOLIO</h1>
+
+ <h2>Kliknij aby pokazać</h2>
+  <a href="https://www.instagram.com/stories/highlights/17995675900538713/" target="_blank" class="portfolio-link">
+    <img src="flightcore_portfolio.jpg" alt="❗ PORTFOLIO 📁 CREDITS ❗">
+  </a>
+
     <style>
     body {
       margin: 0;
@@ -86,102 +179,6 @@
 
 </head>
 <body>
-
-<h1>PORTFOLIO | SPRAWDŹ KTO U NAS BYŁ | PORTFOLIO</h1>
-
-<div class="gallery">
-  <img src="flightcore1.jpg" alt="Flightcore 1" onclick="openLightbox(0)">
-  <img src="flightcore2.jpg" alt="Flightcore 2" onclick="openLightbox(1)">
-  <img src="flightcore3.jpg" alt="Flightcore 3" onclick="openLightbox(2)">
-  <img src="flightcore4.jpg" alt="Flightcore 4" onclick="openLightbox(3)">
-  <img src="flightcore5.jpg" alt="Flightcore 5" onclick="openLightbox(4)">
-  <img src="flightcore6.jpg" alt="Flightcore 6" onclick="openLightbox(5)">
-</div>
-
-<div id="lightbox">
-  <img id="lightbox-img" src="" alt="Lightbox">
-  <div class="controls">
-    <span onclick="prevImage()">&#8592; Poprzednie</span>
-    <span onclick="closeLightbox()">Zamknij X</span>
-    <span onclick="nextImage()">Następne &#8594;</span>
-  </div>
-</div>
-
-<footer>
-  © 2025 Flightcore Studios Sp. z o.o. | <a href="http://flightcore.pl" target="_blank">flightcore.pl</a>
-</footer>
-
-<script>
-const images = [
-  "flightcore1.jpg",
-  "flightcore2.jpg",
-  "flightcore3.jpg",
-  "flightcore4.jpg",
-  "flightcore5.jpg",
-  "flightcore6.jpg"
-];
-
-let currentIndex = 0;
-
-function openLightbox(index) {
-  currentIndex = index;
-  document.getElementById('lightbox-img').src = images[index];
-  document.getElementById('lightbox').style.display = 'flex';
-}
-
-function closeLightbox() {
-  document.getElementById('lightbox').style.display = 'none';
-}
-
-function nextImage() {
-  currentIndex = (currentIndex + 1) % images.length;
-  document.getElementById('lightbox-img').src = images[currentIndex];
-}
-
-function prevImage() {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  document.getElementById('lightbox-img').src = images[currentIndex];
-}
-</script>
-
-<body>
-
-  <header>
-    <h1>🧩 Flightcore Studios 🧩</h1>
-    <p>📍 Mickiewicza 9/U1, 01-517 Warszawa</p>
-  </header>
-<p>kontakt@flightcore.pl</p>
-  <div class="social">
-<a href="https://dwizzy.space">📁 Portfolio Dwizzy`ego</a>
-    <a href="mailto:kontakt@flightcore.pl">✉️ E-mail</a>
-    <a href="https://instagram.com/dwizzy23_" target="_blank">📲 Instagram DM</a>
-  </div>
-
-  <div class="map">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2445.916086649873!2d20.9898976!3d52.2618083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecd5cba473bdf%3A0x42b119266c786761!2sFLIGHTCORE%20Studios!5e0!3m2!1spl!2spl!4v1719580910401!5m2!1spl!2spl" 
-      width="100%" 
-      height="500" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-
-<video controls width="600" style="border: 2px solid #33BC2E; border-radius: 8px; margin: 20px 0;">
-  <source src="flightcore pentor 3.mp4" type="video/mp4">
-  Nie mozemy wyswietlic pliku. Zmien przegladarke badz urzadzenie!
-</video>
-
-  <img src="flightcore dwizzy kejn.jpg" alt="FLIGHTCORE DWIZZY KEJN" class="main-image">
-
-<h1 style="text-align: center;">PORTFOLIO | SPRAWDŹ KTO U NAS BYŁ | PORTFOLIO</h1>
-
- <h2>Kliknij aby pokazać</h2>
-  <a href="https://www.instagram.com/stories/highlights/17995675900538713/" target="_blank" class="portfolio-link">
-    <img src="flightcore_portfolio.jpg" alt="❗ PORTFOLIO 📁 CREDITS ❗">
-  </a>
 
 <footer>
   © 2025 Flightcore Studios Sp. z o.o. | <a href="https://flightcore.pl" target="_blank">Flightcore.pl</a> | <a href="https://dwizzy.space" target="_blank">dwizzy.space
