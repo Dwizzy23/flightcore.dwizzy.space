@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Flightcore Studios | Flightcore.Dwizzy.Space</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #111;
-      color: #fff;
+      color: #33BC2E; /* zielony tekst na całej stronie */
       text-align: center;
+    }
+
+    /* Wszystkie nagłówki i tekst na zielono */
+    h1, h2, p, a, span, footer, .social a {
+      color: #33BC2E;
     }
 
     h1 {
       margin-top: 30px;
-      text-align: center;
       font-size: 24px;
     }
 
@@ -32,6 +36,9 @@
       gap: 10px;
       justify-content: center;
       margin-top: 30px;
+      border: 2px solid #33BC2E;
+      border-radius: 8px;
+      padding: 15px;
     }
 
     .gallery img {
@@ -41,10 +48,12 @@
       cursor: pointer;
       transition: transform 0.2s;
       border-radius: 8px;
+      border: 2px solid #33BC2E;
     }
 
     .gallery img:hover {
       transform: scale(1.05);
+      border-color: #22a822;
     }
 
     #lightbox {
@@ -52,11 +61,14 @@
       position: fixed;
       z-index: 999;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.9);
+      background: rgba(0, 0, 0, 0.9);
       justify-content: center;
       align-items: center;
       flex-direction: column;
       padding: 20px;
+      border: 2px solid #33BC2E;
+      border-radius: 8px;
+      color: #33BC2E;
     }
 
     #lightbox img {
@@ -65,16 +77,17 @@
       width: auto;
       height: auto;
       border-radius: 8px;
+      border: 2px solid #33BC2E;
     }
 
     #lightbox .controls {
       margin-top: 10px;
-      color: white;
       font-size: 28px;
       cursor: pointer;
       display: flex;
       justify-content: center;
       gap: 30px;
+      color: #33BC2E;
     }
 
     .social {
@@ -83,6 +96,9 @@
       justify-content: center;
       gap: 15px;
       flex-wrap: wrap;
+      border: 2px solid #33BC2E;
+      border-radius: 8px;
+      padding: 10px;
     }
 
     .social a {
@@ -92,7 +108,7 @@
       border: 1px solid #33BC2E;
       padding: 8px 12px;
       border-radius: 5px;
-      transition: background 0.2s;
+      transition: background 0.2s, color 0.2s;
     }
 
     .social a:hover {
@@ -102,6 +118,9 @@
 
     .map {
       margin: 30px 0;
+      border: 2px solid #33BC2E;
+      border-radius: 8px;
+      overflow: hidden;
     }
 
     .main-image {
@@ -109,6 +128,7 @@
       height: auto;
       margin: 20px 0;
       border-radius: 8px;
+      border: 2px solid #33BC2E;
     }
 
     .portfolio-link img {
@@ -119,10 +139,12 @@
       margin-top: 20px;
       cursor: pointer;
       transition: transform 0.2s;
+      border: 2px solid #33BC2E;
     }
 
     .portfolio-link img:hover {
       transform: scale(1.05);
+      border-color: #22a822;
     }
 
     video {
@@ -131,25 +153,33 @@
       margin: 20px 0;
       max-width: 90%;
       height: auto;
+      background: black;
+      outline: none;
     }
 
     footer {
       margin-top: 50px;
       padding: 20px;
-      background: #222;
-      color: #aaa;
+      background: #111;
+      color: #33BC2E;
       font-size: 14px;
+      border: 2px solid #33BC2E;
+      border-radius: 8px;
     }
 
     footer a {
-      color: #aaa;
+      color: #33BC2E;
       text-decoration: underline;
+      transition: color 0.2s;
+    }
+
+    footer a:hover {
+      color: #22a822;
     }
   </style>
 </head>
 
 <body>
-
   <header>
     <h1>🧩 Flightcore Studios 🧩</h1>
     <p>📍 Mickiewicza 9/U1, 01-517 Warszawa</p>
@@ -165,16 +195,16 @@
   <h1>Zobacz naszą przestrzeń!</h1>
 
   <div class="gallery">
-    <img src="flightcore1.jpg" alt="Flightcore 1" onclick="openLightbox(0)">
-    <img src="flightcore2.jpg" alt="Flightcore 2" onclick="openLightbox(1)">
-    <img src="flightcore3.jpg" alt="Flightcore 3" onclick="openLightbox(2)">
-    <img src="flightcore4.jpg" alt="Flightcore 4" onclick="openLightbox(3)">
-    <img src="flightcore5.jpg" alt="Flightcore 5" onclick="openLightbox(4)">
-    <img src="flightcore6.jpg" alt="Flightcore 6" onclick="openLightbox(5)">
+    <img src="flightcore1.jpg" alt="Flightcore 1" onclick="openLightbox(0)" />
+    <img src="flightcore2.jpg" alt="Flightcore 2" onclick="openLightbox(1)" />
+    <img src="flightcore3.jpg" alt="Flightcore 3" onclick="openLightbox(2)" />
+    <img src="flightcore4.jpg" alt="Flightcore 4" onclick="openLightbox(3)" />
+    <img src="flightcore5.jpg" alt="Flightcore 5" onclick="openLightbox(4)" />
+    <img src="flightcore6.jpg" alt="Flightcore 6" onclick="openLightbox(5)" />
   </div>
 
   <div id="lightbox">
-    <img id="lightbox-img" src="" alt="Lightbox">
+    <img id="lightbox-img" src="" alt="Lightbox" />
     <div class="controls">
       <span onclick="prevImage()"><-</span>
       <span onclick="closeLightbox()">X</span>
@@ -183,34 +213,34 @@
   </div>
 
   <div class="map">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2445.916086649873!2d20.9898976!3d52.2618083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecd5cba473bdf%3A0x42b119266c786761!2sFLIGHTCORE%20Studios!5e0!3m2!1spl!2spl!4v1719580910401!5m2!1spl!2spl" 
-      width="100%" 
-      height="500" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2445.916086649873!2d20.9898976!3d52.2618083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecd5cba473bdf%3A0x42b119266c786761!2sFLIGHTCORE%20Studios!5e0!3m2!1spl!2spl!4v1719580910401!5m2!1spl!2spl"
+      width="100%"
+      height="500"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
   </div>
 
   <video controls>
-    <source src="flightcore pentor 3.mp4" type="video/mp4">
+    <source src="flightcore pentor 3.mp4" type="video/mp4" />
     Nie możemy wyświetlić pliku. Zmień przeglądarkę lub urządzenie!
   </video>
 
-  <img src="flightcore dwizzy kejn.jpg" alt="FLIGHTCORE DWIZZY KEJN" class="main-image">
+  <img src="flightcore dwizzy kejn.jpg" alt="FLIGHTCORE DWIZZY KEJN" class="main-image" />
 
   <h1>PORTFOLIO | SPRAWDŹ KTO U NAS BYŁ | PORTFOLIO</h1>
 
   <h2>Kliknij aby pokazać</h2>
   <a href="https://www.instagram.com/stories/highlights/17995675900538713/" target="_blank" class="portfolio-link">
-    <img src="flightcore_portfolio.jpg" alt="❗ PORTFOLIO 📁 CREDITS ❗">
+    <img src="flightcore_portfolio.jpg" alt="❗ PORTFOLIO 📁 CREDITS ❗" />
   </a>
 
   <footer>
-    © 2025 Flightcore Studios Sp. z o.o. | 
-    <a href="https://flightcore.pl" target="_blank">Flightcore.pl</a> | 
+    © 2025 Flightcore Studios Sp. z o.o. |
+    <a href="https://flightcore.pl" target="_blank">Flightcore.pl</a> |
     <a href="https://dwizzy.space" target="_blank">dwizzy.space</a>
   </footer>
 
@@ -221,32 +251,30 @@
       "flightcore3.jpg",
       "flightcore4.jpg",
       "flightcore5.jpg",
-      "flightcore6.jpg"
+      "flightcore6.jpg",
     ];
 
     let currentIndex = 0;
 
     function openLightbox(index) {
       currentIndex = index;
-      document.getElementById('lightbox-img').src = images[index];
-      document.getElementById('lightbox').style.display = 'flex';
+      document.getElementById("lightbox-img").src = images[index];
+      document.getElementById("lightbox").style.display = "flex";
     }
 
     function closeLightbox() {
-      document.getElementById('lightbox').style.display = 'none';
+      document.getElementById("lightbox").style.display = "none";
     }
 
     function nextImage() {
       currentIndex = (currentIndex + 1) % images.length;
-      document.getElementById('lightbox-img').src = images[currentIndex];
+      document.getElementById("lightbox-img").src = images[currentIndex];
     }
 
     function prevImage() {
       currentIndex = (currentIndex - 1 + images.length) % images.length;
-      document.getElementById('lightbox-img').src = images[currentIndex];
+      document.getElementById("lightbox-img").src = images[currentIndex];
     }
   </script>
-
 </body>
 </html>
-
