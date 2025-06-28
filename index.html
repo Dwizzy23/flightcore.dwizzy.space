@@ -94,6 +94,99 @@
     }
   </style>
 </head>
+<style>
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+#lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+}
+
+#lightbox .controls {
+  margin-top: 10px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+</style>
+
+<div class="gallery">
+  <img src="flightcore1.jpg" alt="Flightcore 1" onclick="openLightbox(0)">
+  <img src="flightcore2.jpg" alt="Flightcore 2" onclick="openLightbox(1)">
+  <img src="flightcore3.jpg" alt="Flightcore 3" onclick="openLightbox(2)">
+  <img src="flightcore4.jpg" alt="Flightcore 4" onclick="openLightbox(3)">
+  <img src="flightcore5.jpg" alt="Flightcore 5" onclick="openLightbox(4)">
+  <img src="flightcore6.jpg" alt="Flightcore 6" onclick="openLightbox(5)">
+</div>
+
+<div id="lightbox">
+  <img id="lightbox-img" src="" alt="Lightbox">
+  <div class="controls">
+    <span onclick="prevImage()">&#8592;</span>
+    <span onclick="closeLightbox()" style="margin: 0 20px;">X</span>
+    <span onclick="nextImage()">&#8594;</span>
+  </div>
+</div>
+
+<script>
+const images = [
+  "flightcore1.jpg",
+  "flightcore2.jpg",
+  "flightcore3.jpg",
+  "flightcore4.jpg",
+  "flightcore5.jpg",
+  "flightcore6.jpg"
+];
+
+let currentIndex = 0;
+
+function openLightbox(index) {
+  currentIndex = index;
+  document.getElementById('lightbox-img').src = images[index];
+  document.getElementById('lightbox').style.display = 'flex';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+}
+
+function nextImage() {
+  currentIndex = (currentIndex + 1) % images.length;
+  document.getElementById('lightbox-img').src = images[currentIndex];
+}
+
+function prevImage() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  document.getElementById('lightbox-img').src = images[currentIndex];
+}
+</script>
+
 <body>
 
   <header>
@@ -120,20 +213,10 @@
 
 <video controls width="600" style="border: 2px solid #33BC2E; border-radius: 8px; margin: 20px 0;">
   <source src="flightcore pentor 3.mp4" type="video/mp4">
-  Twoja przeglądarka nie obsługuje odtwarzania wideo.
+  Nie mozemy wyswietlic pliku. Zmien przegladarke badz urzadzenie!
 </video>
 
-
   <img src="flightcore dwizzy kejn.jpg" alt="FLIGHTCORE DWIZZY KEJN" class="main-image">
-
-<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-  <img src="flightcore1.jpg" alt="Flightcore 1" style="width: 150px; height: auto; object-fit: cover;">
-  <img src="flightcore2.jpg" alt="Flightcore 2" style="width: 150px; height: auto; object-fit: cover;">
-  <img src="flightcore3.jpg" alt="Flightcore 3" style="width: 150px; height: auto; object-fit: cover;">
-  <img src="flightcore4.jpg" alt="Flightcore 4" style="width: 150px; height: auto; object-fit: cover;">
-  <img src="flightcore5.jpg" alt="Flightcore 5" style="width: 150px; height: auto; object-fit: cover;">
-  <img src="flightcore6.jpg" alt="Flightcore 6" style="width: 150px; height: auto; object-fit: cover;">
-</div>
 
 <h1 style="text-align: center;">PORTFOLIO | SPRAWDŹ KTO U NAS BYŁ | PORTFOLIO</h1>
 
