@@ -204,6 +204,38 @@
   </style>
 </head>
 
+<script>
+  const images = [
+    "flightcore1.jpg",
+    "flightcore2.jpg",
+    "flightcore3.jpg",
+    "flightcore4.jpg",
+    "flightcore5.jpg",
+    "flightcore6.jpg"
+  ];
+  let currentIndex = 0;
+
+  function openLightbox(index) {
+    currentIndex = index;
+    document.getElementById("lightbox-img").src = images[currentIndex];
+    document.getElementById("lightbox").style.display = "flex";
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    document.getElementById("lightbox-img").src = images[currentIndex];
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById("lightbox-img").src = images[currentIndex];
+  }
+</script>
+
 <body>
   <header>
     <h1>🧩 Flightcore Studios 🧩</h1>
